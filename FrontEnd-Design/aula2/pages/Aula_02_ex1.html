@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 - HTML</title>
+    <style>
+        body,
+        html {
+            width: 80%;
+            /* Defina a largura desejada para a área centralizada */
+            margin: 0 auto;
+            /* Isso centralizará a tag horizontalmente */
+            padding-top: 50px;
+            /* Opcional: adicione um espaçamento superior */
+            padding-bottom: 50px;
+            /* Opcional: adicione um espaçamento inferior */
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="topo">Uso de Lista não ordenada e ordenada</h1>
+    <ul type="circle"> <!-- aqui há um atributo para mudar o tipo de marcador -->
+        <li>Empresa</li>
+        <li>Produto</li>
+        <li>Serviços</li>
+        <li>Contato</li>
+    </ul>
+
+    <p>-----------------------------------</p>
+
+    <ol type="I" start="3">
+        <!-- aqui há um atributo para mudar o tipo ordenador e um atributo para definir a ordem de inicio da lista -->
+        <li>Empresa</li>
+        <li>Produto</li>
+        <li>Serviços</li>
+        <li>Contato</li>
+    </ol>
+
+    <hr>
+
+    <div>
+        <h1>Exercício: Receita - Bolo de Chocolate</h1>
+
+        <h2>Ingredientes</h2>
+        <ul>
+            <li>4 ovos</li>
+            <li>4 colheres (sopa) de chocolate em pó</li>
+            <li>2 colheres (sopa) de manteiga</li>
+            <li>3 xícaras (chá) de farinha de trigo</li>
+            <li>2 xícaras (chá) de açúcar</li>
+            <li>2 colheres (sopa) de fermento</li>
+            <li>1 xícara (chá) de leite</li>
+        </ul>
+
+        <h2>Modo de Preparo</h2>
+        <ol>
+            <li>Em um liquidificador adicione os ovos, o chocolate em pó, a manteiga, a farinha de trigo, o açúcar e o
+                leite, depois bata por 5 minutos.</li>
+            <li>Adicione o fermento e misture com uma espátula delicadamente.</li>
+            <li> Em uma forma untada, despeje a massa e asse em forno médio (180 ºC) preaquecido por cerca de 40
+                minutos.
+                Não se esqueça de usar uma forma alta para essa receita: como leva duas colheres de fermento, ela cresce
+                bastante! Outra solução pode ser colocar apenas uma colher de fermento e manter a sua receita em uma
+                forma pequena.</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <h1>Lista de definição</h1>
+    <dl>
+        <dt>HTML</dt>
+        <dd>
+            HTML é a linguagem de marcação de textos utilizada
+            para exibir textos como páginas na Internet.
+        </dd>
+        <dt>Navegador</dt>
+        <dd>
+            Navegador é o software que requisita um documento HTML
+            através do protocolo HTTP e exibe seu conteúdo em uma
+            janela.
+        </dd>
+    </dl>
+
+    <hr>
+
+    <h1>Tabelas</h1>
+    <table border="2">
+        <tr><!-- início da linha do cabeçalho-->
+            <th>Cabeçalho 1</th>
+            <th>Cabeçalho 2</th>
+            <th>Cabeçalho 3 </th>
+        </tr>
+        <tr><!-- início da primeira linha-->
+            <td>Linha 1 - Coluna 1</td>
+            <td>Linha 1 - Coluna 2</td>
+            <td>Linha 1 - Coluna 3</td>
+        </tr>
+        <tr><!-- início da segunda linha-->
+            <td>Linha 2 - Coluna 1</td>
+            <td>Linha 2 - Coluna 2</td>
+            <td>Linha 2 - Coluna 3</td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+
+    <h1>Formulário</h1>
+    <form>
+        <fieldset>
+            <legend>Usando a tag form</legend>
+            <br>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" placeholder="Digite seu nome...">
+
+            <br><br>
+            <label>Gênero:</label>
+            <input type="radio" name="genero" value="masculino">Masculino
+            <input type="radio" name="genero" value="feminino">Feminino
+            <input type="radio" name="genero" value="outro">Outro
+            <br><br>
+
+            <label>Lugares para ir:</label>
+            <input type="checkbox" name="lugar" value="praia">Praia
+            <input type="checkbox" name="lugar" value="parque">Parque
+            <input type="checkbox" name="lugar" value="shopping">Shopping
+
+            <br><br>
+            <label>Escolha um tamanho:</label>
+            <select name="tamanhos">
+                <option value="G">Grande</option>
+                <option value="M">Médio</option>
+                <option value="P">Pequeno</option>
+            </select>
+
+            <br><br>
+            <button type="submit">
+                Enviar formulário
+            </button>
+
+            <button type="reset">
+                Limpar formulário
+            </button>
+
+            <button type="button">
+                Sem ação padrão
+            </button>
+        </fieldset>
+    </form>
+
+    <br>
+    <hr>
+
+    <h1>Uso de links</h1>
+
+    <h2>Links relativos</h2>
+    <!-- Os links relativos são aqueles que apontam para páginas localizadas dentro do mesmo projeto. 
+        Se a página referenciada estiver na mesma pasta, basta mencionar o seu nome para gerar o link -->
+    <a href="produtos.html">Produtos</a>
+    <a href="contato.html">Contato</a>
+
+    <!-- Caso o arquivo esteja em uma pasta específica, a mesma deve ser mencionada. -->
+    <a href="pages/produtos.html">Contato</a>
+
+    <h2>Links absolutos</h2>
+    <!-- Os links absolutos são aqueles cujo destino apontam para páginas que estão 
+        fora do site e deve ser especificado utilizando a URL completa: -->
+    <a href="https://www.fiap.com.br/graduacao/bacharelado/engenharia-de-software/">Engenharia de Software</a>
+
+    <h2>Links internos</h2>
+    <!-- Os links internos permitem fazer referências a seções de sua página, para as quais a id é utilizada: -->
+    <a href="#topo">Vá ao topo da página</a>
+
+    <!-- Também é possível usar como destino uma seção específica em uma página diferente: -->
+    <a href="contato.html#formulario">Formulario de contato</a>
+    <br>
+    <br>
+    <hr>
+
+    <h1>Multimídia em HTML</h1>
+    <h2>Imagens</h2>
+    <!-- Para funcionar, requer a indicação de onde está o arquivo a ser exibido. Isso é feito com o atributo “src” (source ou fonte), 
+        que respeita todas as regras de roteamento vistas nos links.  -->
+    <img src="cachorro_caramelo.jpg" alt="Cachorro Caramelo">
+    <!-- O atributo “alt” deve ser um texto que representa a imagem que está sendo visualizada. 
+        Deve ser conciso e breve, mas deixar claro do que se trata a imagem. -->
+
+    <h2>Links em imagens</h2>
+    <!-- Podemos também combinar as duas tags e colocar links nas imagens. -->
+    <a href="https://www.fiap.com.br/graduacao/bacharelado/engenharia-de-software/">
+        <img src="img/logo_fiap.png" alt="Logo FIAP" />
+    </a>
+
+    <h2>Tag Iframe</h2>
+    <!-- É um elemento HTML que permite inserir ou incorporar um código ou documento HTML dentro de um outro documento HTML. -->
+    <iframe src="pagina_fonte.html" width=290 height=250>
+        Texto para quando o navegador não conhece a tag iframe
+    </iframe>
+
+    <h2>Inserir vídeo do Youtube</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wdU9L3DqU2w?si=8U0XtG3uQq8qt3uJ"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+</body>
+
+</html>
