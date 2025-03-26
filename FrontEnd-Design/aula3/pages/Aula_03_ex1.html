@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03 - HTML</title>
+    <style>
+        body,
+        html {
+            width: 80%;
+            /* Defina a largura desejada para a área centralizada */
+            margin: 0 auto;
+            /* Isso centralizará a tag horizontalmente */
+            padding-top: 50px;
+            /* Opcional: adicione um espaçamento superior */
+            padding-bottom: 50px;
+            /* Opcional: adicione um espaçamento inferior */
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulário</h1>
+    <form>
+        <fieldset>
+            <legend>Usando a tag form</legend>
+            <br>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" placeholder="Digite seu nome...">
+
+            <br><br>
+            <label>Gênero:</label>
+            <input type="radio" name="genero" value="masculino">Masculino
+            <input type="radio" name="genero" value="feminino">Feminino
+            <input type="radio" name="genero" value="outro">Outro
+            <br><br>
+
+            <label>Lugares para ir:</label>
+            <input type="checkbox" name="lugar" value="praia">Praia
+            <input type="checkbox" name="lugar" value="parque">Parque
+            <input type="checkbox" name="lugar" value="shopping">Shopping
+
+            <br><br>
+            <label>Escolha um tamanho:</label>
+            <select name="tamanhos">
+                <option value="G">Grande</option>
+                <option value="M">Médio</option>
+                <option value="P">Pequeno</option>
+            </select>
+
+            <br><br>
+            <button type="submit">
+                Enviar formulário
+            </button>
+
+            <button type="reset">
+                Limpar formulário
+            </button>
+
+            <button type="button">
+                Sem ação padrão
+            </button>
+        </fieldset>
+    </form>
+
+    <br>
+    <hr>
+
+    <h1>Multimídia em HTML</h1>
+    <h2>Imagens</h2>
+    <!-- Para funcionar, requer a indicação de onde está o arquivo a ser exibido. Isso é feito com o atributo “src” (source ou fonte), 
+        que respeita todas as regras de roteamento vistas nos links.  -->
+    <img src="../img/cachorro_caramelo.jpg" alt="Cachorro Caramelo">
+    <!-- O atributo “alt” deve ser um texto que representa a imagem que está sendo visualizada. 
+        Deve ser conciso e breve, mas deixar claro do que se trata a imagem. -->
+
+    <h2>Links em imagens</h2>
+    <!-- Podemos também combinar as duas tags e colocar links nas imagens. -->
+    <a href="https://www.fiap.com.br/graduacao/bacharelado/engenharia-de-software/">
+        <img src="img/logo_fiap.png" alt="Logo FIAP" />
+    </a>
+
+    <h2>Tag Iframe</h2>
+    <!-- É um elemento HTML que permite inserir ou incorporar um código ou documento HTML dentro de um outro documento HTML. -->
+    <iframe src="pagina_fonte.html" width=290 height=250>
+        Texto para quando o navegador não conhece a tag iframe
+    </iframe>
+
+    <h2>Inserir vídeo do Youtube</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wdU9L3DqU2w?si=8U0XtG3uQq8qt3uJ"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+</body>
+
+</html>
