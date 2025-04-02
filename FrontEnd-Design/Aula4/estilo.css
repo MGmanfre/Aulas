@@ -1,0 +1,10 @@
+/*seletor{
+    propriedade1: valor;
+    propriedade2: valor;
+}
+*/
+h1 {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 70px;
+}

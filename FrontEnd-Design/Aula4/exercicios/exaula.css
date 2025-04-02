@@ -1,0 +1,9 @@
+.desafio1 { 
+    color: orange;
+}
+
+#lista1, #lista2 {
+    color: #1D5DEC;
+    background-color: rgba(6, 255, 234, 0.89);
+    list-style: upper-roman;
+}

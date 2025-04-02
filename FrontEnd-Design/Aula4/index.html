@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao CSS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
+
+    <style>
+        /* comentário de CSS, dentro desta tag, vai o código CSS, */
+        h1 {
+            color:lime !important;
+        }
+        section article h2 {
+            background-color: #aa3333; 
+            width: 200px;
+            height: 200px;
+        }
+        section {
+            padding: 50px 30px 20px 60px;
+            margin-left: 40px;
+        }
+        section article {
+            background-color: #795f5f;
+            width: 500px;
+            height: 500px;
+        }
+        section article p {
+            line-height: 4;
+        }
+        .bordasArredondadas {
+            border-radius: 10px;
+        }
+        .imgPequena{
+            width: 100px;
+            height: 80px;
+        }
+        #produtos {
+            color:#5fa52634
+        }
+        /* ################################################### */
+
+        div {
+            color: red;
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+    <h1>Cabeçalho H1 sem formatação</h1>
+    <h2 style="color:blueviolet; font-family: cursive;">Cabeçalho H2 com formatação CSS</h2>
+
+    <p>Parágrafo sem formatação</p>
+    <p style="font-family: fantasy;">Parágrafo com formatação CSS</p>
+    <p>Outro parágrafo sem formatação</p>
+
+    <section>
+        <article>
+            <h2> Título </h2>
+            <p> Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad
+                minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat.
+            </p>
+        </article>
+    </section>
+    
+    <img src="" class="bordasArredondadas imgPequena">
+
+    <section id="produtos">
+        Lorem ipsum dolor sit amet
+        consectetur adipisicing elit.
+    </section>
+
+    <!-- ################################################################################### -->
+
+    <div>
+        <p>
+            Este parágrafo ficará em
+            vermelho, por herança
+        </p>
+    </div>
+    
+</body>
+</html>
