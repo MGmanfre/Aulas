@@ -1,0 +1,93 @@
+.display{
+background-color: antiquewhite;
+}
+
+.display__p {
+    /*é um elemento em bloco que converto em linha*/
+    display: inline;
+    background-color: yellow;
+}
+
+.display__span {
+    /*é um elemento em linha que converto em bloco*/
+    display: block;
+    background-color: rgb(197, 116, 116);
+}
+
+/* display: inline-block;
+   display: none;
+*/
+
+.position {
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+}
+.position__p {
+    font-size: 18px;
+}
+.position__azul {
+    width: 100px;
+    height: 100px;
+    border: solid 4px blue;
+    background-color: lightblue;
+}
+.position__amarelo {
+    width: 100px;
+    height: 100px;
+    border: solid 4px red;
+    background-color: yellow;
+    position: relative; /* absolute; top: 320px; left: 100px; */ /* fixed; top: 10px; left: 10px;*/ /* sticky; top: 20px; */
+    top: 40px; 
+    left: 40px;
+}
+
+/* Menu com submenu */
+
+.menu {
+    margin: 20px 0;
+    list-style: none;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    background-color:rgb(111, 190, 226);
+}
+
+.menu__item {
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    margin-right: 20px;
+}
+.menu__item a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+}
+
+.submenu {
+    list-style: none;
+    position: absolute;
+    display: none;
+    width: 100px;
+    background-color: lightblue;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-width: 80px;
+}
+
+.com-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu__item a {
+    color: #333;
+    padding: 8px 15px;
+    display: block;
+}
+
+.submenu__item:hover a {
+    background-color: #f0f0f0;
+}

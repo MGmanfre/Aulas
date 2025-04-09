@@ -1,0 +1,110 @@
+/* Metodologia BEM */
+
+/* Bloco */
+.noticia {
+    background-color: lightgray;
+}
+
+/* Elemento */
+.noticia__titulo {
+    font-size: 40px;
+}
+/* Modiificador */
+.noticia--destacada {
+    background-color: dimgray;
+}
+.noticia__titulo--uppercase {
+    text-transform: uppercase;
+}
+
+/* exemplo */
+
+.card {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .card__imagem {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .card__titulo {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .card__descricao {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }  
+
+/* Box Modeling */
+
+/*div {
+    background-color: yellow;
+
+    width: 400px;    largura
+    height: 250px;    altura
+} */
+
+.div {
+    /* propriedades decorativas */
+    border: solid 1px black;
+    display: inline-block;
+    font-size: 30px;
+    font-family: Arial;
+    /* propriedades que fazem o "problema" */
+    width: 300px;
+    height: 110px;
+    /* Overflow: Visible: valor padrão. Hidden: o excedente não é exibido. 
+    Scroll: gera uma barra de scroll nos dois eixos (x/y). Auto: gera o scroll apenas no eixo necessário. */
+    overflow: hidden;
+    /* inserindo margem e espaçamento */
+    margin: 50px 10px 12px 15px;
+    padding: 5px 10px 12px 15px;
+
+    border-top: groove 10px red;
+    border-right: ridge 7px cyan;
+    border-bottom: solid 7px green;
+    border-left: solid 12px yellow;
+
+    border-radius: 100%;
+
+}
+
+    /*
+    margin: 5px 10px 12px 15px;
+    padding: 5px 10px 12px 15px;
+
+    border-top: solid 5px red;
+    border-right: solid 10px cyan;
+    border-bottom: solid 7px green;
+    border-left: solid 12px yellow;
+
+    border-radius: 10px;
+
+    */
