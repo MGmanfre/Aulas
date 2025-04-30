@@ -1,0 +1,68 @@
+#grad {
+    background-image: radial-gradient( red, yellow);
+}
+
+div.vazio {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    border: 1px solid black;
+}
+
+div.transform {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    background-color: red;
+    transition: 5s;
+}
+
+div.transform:hover {
+    transform: translate(10px, 20px);
+    height: 200px;
+    width: 150px;
+    background-color: purple;
+    /* transform: rotate(45deg); */
+    /* transform: scale(2,1); */
+    /* transform: skew(20deg, 10deg); */
+}
+
+h1.apareca{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+    z-index: 10;
+}
+
+@keyframes aparecer {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+div.efeito {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation: umEfeito 2s infinite;
+    animation-delay: 5s;
+}
+
+@keyframes umEfeito {
+    0% {width: 100px;}
+    25%{width: 300px;}
+    50%{width: 200px;
+        background-color: red;}
+    75%{width: 300px;}
+    100%{width: 100px;
+        background-color: green;}
+
+}

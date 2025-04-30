@@ -1,0 +1,80 @@
+
+.elemento {
+    animation: nomeDaAnimacao 2s infinite;
+}
+
+@keyframes nomeDaAnimacao {
+  0% { propriedade: valorInicial; }
+  50% { propriedade: valorIntermediario; }
+  100% { propriedade: valorFinal; }
+}
+
+/*
+animation-name: Define o nome da animação que será aplicada ao elemento.
+
+animation-duration: Determina a duração da animação em segundos ou milissegundos.
+
+animation-timing-function: Especifica a função de temporização da animação, controlando a velocidade da transição ao longo do tempo.
+(ease, linear, ease-in, ease-out, ease-in-out)
+
+animation-delay: Define o atraso antes que a animação comece em segundos ou milissegundos.
+
+animation-iteration-count: Indica quantas vezes a animação será repetida.
+(número inteiro positivo ou infinite)
+
+animation-direction: Define a direção da animação, como normal (do início ao fim), reverse (do fim ao início),
+alternate (cada ciclo alterna a direção), ou alternate-reverse (cada ciclo alterna a direção inicial).
+
+animation-fill-mode: Especifica como os estilos são aplicados antes e depois que a animação é executada.
+none (nenhum preenchimento), forwards (aplica o estado final após a animação), backwards (aplica o estado inicial antes da animação), 
+ou both (aplica tanto o estado inicial quanto o final).
+
+animation-play-state: Define o estado da animação, se está em execução ou pausada.
+running (em execução) ou paused (pausado).
+*/
+
+h1 {
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+div.efeito {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    animation-name: um_efeito;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 5s;
+}
+
+@keyframes um_efeito {
+    0% { width: 100px; }
+    25% { width: 300px; }
+    50% { width: 200px;
+        background-color: red; }
+    75% { width: 300px;}
+    100% { width: 100px;
+        background-color:green;}
+ }
+
+ /*forma completa*/
+ div.example {
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+/*forma abreviada*/
+div.example {
+    /* animation: name duration timing-function delay iteration-count direction */
+    animation: example 5s linear 2s infinite alternate;
+}

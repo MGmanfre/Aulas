@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Estilização CSS</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    /* Pseudo-classes dinâmicas */
+    div:hover { 
+        color: orange; 
+    }
+
+    a:active { 
+        color: blue; 
+    }
+
+    a:visited { 
+        color: red; 
+    }
+
+    input:focus{
+        background-color: yellow;
+    }
+
+    /* Pseudo-classes estruturais */
+    li:first-child { 
+        color: orange; 
+    }
+
+    li:last-child { 
+        color: red; 
+    }
+
+    /* Pseudo-classes de validação */
+    :checked {
+        margin-left: 25px;
+    }
+
+    input[type="radio"]:checked {
+        margin-left: 25px;
+    }
+
+    input[type="checkbox"]:checked {
+        margin-left: 25px;
+    }
+
+    option:checked {
+        color: red;
+    }
+
+    input:disabled {
+        background: #ccc;
+    }
+
+    input[type="text"]:disabled {
+        background: #ccc;
+    }
+
+    input[type=email]:invalid {
+        background: orange;
+    }
+
+    input[type=email]:valid {
+        background: green;
+    }
+
+    input:required {
+        background: red;
+    }
+
+    /* Pseudo-Elemento */
+    ::placeholder {
+        color: yellow;
+    }
+
+    p::first-letter {
+        color: red;
+        text-transform: uppercase;
+    }
+
+    p::first-line {
+        color: blue;
+    }
+
+    p::selection {
+        color: red;
+        background: yellow;
+    }
+
+    ::marker {
+        color: rgb(16, 8, 139);
+        font-size: 23px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div>Hover sobre mim para ver a cor laranja.</div>
+        <a href="#">Clique aqui</a>
+        <br><br>
+        <input type="text" placeholder="Digite algo" required>
+        <br><br>
+        <ul>
+            <li>Primeiro item da lista</li>
+            <li>Segundo item da lista</li>
+            <li>Terceiro item da lista</li>
+            <li>Último item da lista</li>
+        </ul>
+        <input type="checkbox" checked> Checkbox
+        <br>
+        <input type="radio" name="gender" value="male" checked> Masculino
+        <input type="radio" name="gender" value="female"> Feminino
+        <br>
+        <input type="radio" name="color" value="red" checked> Vermelho
+        <input type="radio" name="color" value="blue"> Azul
+        <input type="radio" name="color" value="green"> Verde
+        <br>
+        <select>
+            <option value="1">Opção 1</option>
+            <option value="2" selected>Opção 2</option>
+            <option value="3">Opção 3</option>
+        </select>
+        <br><br>
+        <input type="email" placeholder="Digite seu e-mail" required>
+        <br><br>
+        <p>Este é um parágrafo com um texto longo para mostrar o efeito da seleção.</p>
+    </div>
+</body>
+</html>

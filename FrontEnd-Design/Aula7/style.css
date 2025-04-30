@@ -1,0 +1,86 @@
+/*
+Unidades para ângulos: 
+    deg - grau: um círculo tem 360deg;
+    grad - grado: um círculo tem 400grad;
+    rad - radiano: um círculo tem 2𝛑rad;
+    turn - volta: um círculo tem 1turn;
+
+Unidades de duração:
+    s - segundo: 1s;
+    ms - milissegundo: 1/1000s;
+*/
+
+#grad {
+    width: 300px;
+    height: 100px;
+    /*background-image: linear-gradient(45deg, red, yellow, blue, yellow); /* to bottom, to left, to right, to top, 45deg */
+    background-image: radial-gradient(red, yellow);
+}
+
+div.vazio {
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+    position: absolute;
+    Left: 200px;
+    top: 150px;
+}
+
+div.transform {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    Left: 200px;
+    top: 150px;
+    background-color: red;
+    /*transform: translate(10px, 20px);*/
+    /*transform: rotateX(30deg);*/
+    /*transform: scale(2, 2);*/
+    /*transform: skew(200deg, 400grad);*/
+    /*transform: skewX(20deg);*/
+    /*transform: skewY(20deg);*/   
+}
+
+img.transform {
+    /*transform: rotateX(60deg);*/
+    /*transform: rotateY(3.142rad); /* 3.142rad, 45deg, -0.2turn */
+    transform: rotateZ(-0.2turn);
+    /*transform: translateX(50px) rotate(45deg) scale(1.8);*/
+}
+
+div.transition {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    /* propriedade duração */
+    /*transition: height 2s, width 5s; /* , width 2s - devem ser separados por vírgula */
+    transition: all 2s;
+}
+div.transition:hover {
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    background-color: cyan;
+}
+
+input {
+    width: 100px;
+    height: 100px;
+    transition: all 2s;
+}
+
+input:focus {
+    width: 200px;
+    font-size: 24px;
+}
+
+div.animado {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: solid 1px;
+}
+
+div.animado:hover {
+    transform: skewY(25deg)
+}

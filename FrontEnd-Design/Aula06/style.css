@@ -1,0 +1,105 @@
+/* Pseudo-classes dinâmicas */
+div:hover { 
+    color: orange; 
+}
+
+a:active { 
+    color: blue; 
+}
+
+a:visited { 
+    color: red; 
+}
+
+input:focus{
+    background-color: yellow;
+}
+
+/* Pseudo-classes estruturais */
+
+/* Este seletor define a cor laranja para o primeiro filho li dentro de qualquer elemento pai */
+li:first-child { 
+    color: orange; 
+}
+/* Este seletor define a cor vermelha para o último filho li dentro de qualquer elemento pai */
+li:last-child { 
+    color: red; 
+}
+/* Este seletor define a cor verde para cada segundo filho li dentro de qualquer elemento pai */
+li:nth-child(2n+2){ 
+    color: green; 
+}
+/* Este seletor define a cor laranja para todos os filhos li que não possuem a classe "meu-item" */
+li:not(.meu-item){ 
+    color: orange; 
+}
+/* Pseudo-classes de validação */
+
+/* qualquer elemento "checkable" */
+:checked {
+    margin-left: 25px;
+}
+/* qualquer elemento radio */
+input[type="radio"]:checked {
+    margin-left: 25px;
+}
+
+/* apenas elementos checkbox */
+input[type="checkbox"]:checked {
+    margin-left: 25px;
+}
+/* apenas elementos option */
+option:checked {
+    color: red;
+}
+input:disabled {
+    background: #ccc;
+}
+input[type="text"]:disabled {
+    background: #ccc;
+}
+input[type=email]:invalid {
+    background: orange;
+}
+input[type=email]:valid {
+    background: green;
+}
+input:required {
+    background: red;
+}
+    
+/* Pseudo-Elemento */
+
+::placeholder {
+    color: rgb(6, 159, 197)
+}
+
+p::first-letter {
+    color: red;
+    text-transform: uppercase;
+}
+
+p::first-line {
+    color: blue;
+}
+
+p::selection {
+    color: red;
+    background: yellow;
+}
+
+::marker {
+    color: red;
+    font-size: 23px;
+} 
+
+/* 
+:nth-child(odd)
+Representa elementos cuja posição numérica em uma série de irmãos seja ímpar: 1, 3, 5, etc.
+
+:nth-child(even)
+Representa elementos cuja posição numérica em uma série de irmãos seja par: 2, 4, 6, etc.
+
+:nth-child(3n+4)
+Representa os elementos de número 4 [=(3×0)+4], 7 [=(3×1)+4], 10 [=(3×2)+4], 13 [=(3×3)+4], etc.
+*/

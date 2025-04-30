@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula 13</title>
+</head>
+
+<body>
+    <div>Div que muda para laranja ao passar o mouse</div>
+
+    <a href="#">Link que fica azul ao ser clicado</a>
+
+    <br><br>
+
+    <input type="text" placeholder="Input que fica amarelo ao ganhar foco">
+
+    <br><br>
+
+    <ul>
+        <li>Item 1</li> <!-- Este será laranja devido ao primeiro-child -->
+        <li>Item 2</li> <!-- Este será verde devido ao nth-child -->
+        <li class="meu-item">Item 3</li> <!-- Este será laranja devido ao :not() -->
+        <li>Item 4</li> <!-- Este será verde devido ao nth-child -->
+        <li>Item 5</li> <!-- Este será laranja devido ao :last-child -->
+    </ul>
+
+    <!-- Checkbox -->
+    <input type="checkbox" checked> Checkbox<br>
+
+    <!-- Radio -->
+    <input type="radio" name="gender" value="male" checked> Masculino<br>
+    <input type="radio" name="gender" value="female"> Femenino<br>
+
+    <!-- Select com Option -->
+    <select>
+        <option value="volvo">Volvo</option>
+        <option value="saab" selected>Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    <br><br>
+    <!-- Inputs desabilitados -->
+    <input type="text" disabled><br><br>
+    <input type="email" required><br>
+
+    <br><br>
+    <!-- Placeholder -->
+    <input type="text" placeholder="Digite aqui">
+
+    <!-- Parágrafos -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente quo quasi quisquam nobis numquam voluptates
+        quis amet eum consequuntur explicabo quam deserunt corporis vero provident pariatur maiores, molestias fuga
+        sunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, sed!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, inventore!</p>
+
+    <!-- Lista não ordenada -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Ao Vivo</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh; /* unidade de medida em relação a porcentagem da viewport */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* transition: propriedade | duração | função-de-tempo (ease, linear, ease-in, ease-out, ease-in-out)| atraso */
+            transition: all 0.3s ease;
+        }
+
+        #box1:hover {
+            transform: rotate(45deg);
+        }
+
+        #box2:hover {
+            background-color: red;
+            transform: scale(1.5);
+        }
+
+        #box3:hover {
+            transform: translateX(50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+    </div>
+</body>
+
+</html>
