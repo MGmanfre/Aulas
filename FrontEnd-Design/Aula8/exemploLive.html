@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            height: 650px;
+            flex-direction: column;
+        }
+        main {
+            display: flex;
+            height: 100%;
+            width: auto;
+        }
+        header, footer {
+            background-color: grey;
+            height: 200px;
+        }
+        aside, nav {
+            background-color: pink;
+            width: 20%;
+        }
+        article {
+            background-color: pink;
+            width: 60%;
+        }
+        article, nav, aside, header, footer {
+            padding: 1px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <main>
+        <nav>Nav</nav>
+        <aside>Aside</aside>
+        <article>Article</article>
+    </main>
+    <footer>Footer</footer>
+</body>
+</html>
