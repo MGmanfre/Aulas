@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #2d2d2d;
+            color: #b300b3;
+        }
+
+        form {
+            background-color: #2d2d2d;
+            color: #b300b3;
+            padding: 100px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(83, 1, 68);
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        #form {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        #cadastroUsuario {
+            flex: 1;
+        }
+
+        label {
+            color: #d0428e;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            background-color: #2d2d2d;
+            color: #b300b3;
+            border: 1px solid #b300b3;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: left;
+            height: 50px;
+            width: 300px;
+            font-size: medium;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background-color: #b300b3;
+            color: #ffffff;
+            border: none;
+            padding: 10px 40px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #7a007a;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button id="btnClicar">Clique aqui</button>
+    <p id="paragrafo">Texto variável</p> -->
+
+    <form id="form" style="display: flex; flex-direction: column;">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+
+        <label for="genero">Gênero:</label>
+        <select id="genero">
+            <option value="option0">???</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Não Binário">Não Binário</option>
+        </select>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem"></textarea>
+        <button id="btnEnviar">Enviar</button>
+        <p id="mensagemErro"></p>
+    </form>
+    <div id="cadastroUsuario">
+        <h2>Usuários</h2>
+    </div>
+</body>
+<script src="./app.js"></script>
+
+</html>
