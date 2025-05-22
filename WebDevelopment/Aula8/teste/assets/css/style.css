@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #161616;
+    color: #ffffff;
+}
+
+form {
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+    background-color: #161616;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #6a0dad;
+}
+
+input[type="text"],
+input[type="password"],
+option,
+select {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 10px;
+    border: solid 2px #6a0dad;
+    border-radius: 5px;
+    background-color: #161616;
+    color: #ffffff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    box-shadow: 4px 4px 8px #6a0dad;
+    border-radius: 5px;
+    background-color: #6a0dad;
+    color: #000000;
+    cursor: pointer;
+    text-align: center;
+}
+input[type="submit"]:hover {
+    background-color: #7123b5;
+}
+
+h1 {
+    position: relative;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+a {
+    color: #912ed8;
+    text-decoration: none;
+}
+a:hover {
+    color: #6a0dad;
+}
+a:active {
+    color: #340854;
+}
+
+input::placeholder{
+    color: #7f50a1;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

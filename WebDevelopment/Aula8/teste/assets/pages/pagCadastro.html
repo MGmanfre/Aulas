@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+
+    <div>
+        <h1>Cadastro</h1>
+        <form action="../../index.html" id="formCad">
+            <label for="username">Usuário:</label>
+            <input type="text" id="userReg" name="username" placeholder="Crie seu Usuário" required>
+            <label for="genero">Gênero</label>
+            <select id="genero" name="genero">
+                <option value="???">???</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="naoBinario">Não-Binário</option>
+            </select>
+            <label for="password">Senha:</label>
+            <input type="password" id="passReg" name="password" placeholder="Crie sua Senha" required>
+            <label for="confirmPassword">Confirmação da Senha:</label>
+            <input type="password" id="confirmPassReg" name="confirmPassword" placeholder="Confirme sua nova Senha"
+                required>
+            <input type="submit" id="btnCad" value="Casdastrar">
+        </form>
+        <p>Já tem Login? <a href="../../index.html">clique aqui para fazer Login</a></p>
+    </div>
+
+</body>
+<script src="../js/app.js"></script>
+
+</html>

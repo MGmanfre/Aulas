@@ -10,6 +10,7 @@ const inputEmail = document.getElementById('email');
 const inputGenero = document.getElementById('genero');
 const inputMensagem = document.getElementById('mensagem');
 const btnEnviar = document.getElementById('btnEnviar');
+const cadastros = document.getElementById('cadastros'); // Fix: Define the cadastros element
 
 btnEnviar.addEventListener('click', function (event) {
     event.preventDefault();
@@ -20,7 +21,6 @@ btnEnviar.addEventListener('click', function (event) {
 
     if (nome === '' || email === '' || genero === 'option0' || mensagem === '') {
         alert('Preencha todos os campos!');
-
         return;
     }
 
@@ -30,6 +30,6 @@ btnEnviar.addEventListener('click', function (event) {
     <h3>${nome}</h3>
     <p>${email}</p>
     `;
-    cadastros.append(cardUsuario);
-    form.reset()
-})
+    cadastros.appendChild(cardUsuario);
+    form.reset();
+});
