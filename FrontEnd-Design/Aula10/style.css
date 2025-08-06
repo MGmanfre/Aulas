@@ -1,0 +1,126 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Exemplo 01 */
+
+.grid {
+    display: grid;
+    /* Isso significa que os filhos diretos desse elemento serão organizados em um layout de grade.*/
+    /* 2 colunas */
+    grid-template-columns: 300px 100px;
+    /* "300px" especifica a largura da primeira coluna e "100px" especifica a largura da segunda coluna */
+    /* 2 linhas */
+    /* grid-template-rows: 40px 100px; */
+    /* "40px" especifica a altura da primeira linha e "100px" especifica a altura da segunda linha */
+
+    /* grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr; */
+
+    /* grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr); */
+
+    gap: 10px;
+    /* aplica em todas as lacunas */
+    column-gap: 10px;
+    /* aplica somente entre as colunas */
+    row-gap: 15px;
+    /* aplica somente entre as linhas */
+}
+
+.grid > * {
+    background-color: orange;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+/* exemplo 02 */
+
+header {
+    grid-area: header; /* Define a área de grade 'header' para o elemento com id/classe/tag 'header' */
+}
+footer {
+    grid-area: footer;
+}
+section#produtos { /* Este seletor CSS seleciona um elemento <section> que tenha o atributo id definido como produtos. */
+    grid-area: produtos;
+}
+section#serviços {
+    grid-area: servicos;
+}
+nav {
+    grid-area: nav;
+}
+aside {
+    grid-area: publicidade;
+}
+
+#grade {
+    display: grid;
+    /* Define as larguras das colunas do grid:
+       - A primeira coluna ocupa 20% da largura total do grid
+       - A segunda coluna se ajusta automaticamente para preencher o espaço restante
+       - A terceira coluna ocupa 15% da largura total do grid */
+    grid-template-columns: 20% auto 15%;
+    /* Define as alturas das linhas do grid:
+       - A primeira linha tem 100 pixels de altura
+       - As linhas do meio se ajustam automaticamente para preencher o espaço restante
+       - A última linha tem 75 pixels de altura */
+    grid-template-rows: 100px 1fr 1fr 75px;
+    /* Define as áreas de grade onde os elementos serão posicionados:
+       - Cada linha representa uma linha do grid
+       - As strings representam as áreas de grade onde os elementos serão colocados
+       - Cada string representa uma linha, e as áreas são separadas por espaços
+       - Por exemplo, "nav header header" significa que na primeira linha do grid,
+         o elemento 'nav' ocupa a primeira coluna, e os elementos 'header' ocupam
+         as duas colunas seguintes */
+    grid-template-areas:
+        "nav header header"
+        "nav produtos publicidade"
+        "nav servicos publicidade"
+        "nav footer footer";
+    
+    height: 100vh; /* 100% da altura da viewport */
+    width: 100vw; /* 100% da largura da viewport */
+}
+
+#grade > * {
+    /* seletor de ID do elemento pai e > é o seletor de filho direto, e * seleciona todos os tipos de elementos filhos do elemento */
+    border: 1px solid black;
+}
+
+/* exemplo 03 */
+
+.pai {
+    display: grid;
+    background-color: rgb(235, 252, 2);
+    height: 500px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows:100px 100px 100px;
+
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+    /* Propriedades do container */
+    justify-items: stretch; /* start | end | center | stretch - Distribui os elementos no eixo horizontal. */
+    align-items: stretch; /* start | end | center | stretch - Distribui os elementos no eixo vertical. */
+
+    /* Posição dos elementos */
+    justify-content: center; /* start | end | center | stretch | space-around | space-between | space-evenly - horizontal */
+    align-content: center; /* start | end | center | stretch | space-around | space-between | space-evenly - vertical */
+}
+
+.filho {
+        /* Propriedades dos itens */
+        justify-self: start; /* start | end | center | stretch - horizontal */
+        align-self: center; /* start | end | center | stretch - Distribui os elementos no eixo vertical. */
+}
+
+.pai > * {
+    background-color: orange;
+    border: solid 1px black;
+    width: auto;
+    height: auto;
+}

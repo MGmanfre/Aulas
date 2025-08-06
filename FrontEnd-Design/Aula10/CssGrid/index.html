@@ -1,0 +1,30 @@
+<div class="kodfun">
+  <img src="dog.jpg">
+  <img src="cat.jpg">
+  <img src="cat.jpg">
+  <img src="cat.jpg">
+  <img src="cat.jpg">
+  <img src="cat.jpg">
+  <img src="cat.jpg">
+  <img src="cat.jpg">
+  <img src="cat.jpg">
+  <img src="cat.jpg">
+  <img src="cat.jpg">
+</div>
+
+<style>
+  .kodfun {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  .kodfun>img:first-child {
+    grid-column: 2 / 4;
+    grid-row: 2 / 2;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
