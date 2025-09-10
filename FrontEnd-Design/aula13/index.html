@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Responsivo e Animações com Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-4">
+    <header class="w-full bg-red-500 md:bg-green-500 lg:bg-blue-500">
+        Cor muda com o tamanho da tela
+    </header>
+
+    <br>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-gray-200 p-4">Item 1</div>
+        <div class="bg-gray-200 p-4">Item 2</div>
+        <div class="bg-gray-200 p-4">Item 3</div>
+    </div>
+
+    <br>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+        Hover me
+    </button>
+
+    <br><br>
+
+    <div class="flex justify-center items-center">
+        <div class="bg-gray-200 p-4 rounded-lg shadow-lg transition-transform transform hover:scale-105 w-1/2">
+            Este é um card com sombra e animação de hover.
+        </div>
+    </div>
+    
+    <br><br>
+
+    <div class="w-16 h-16 bg-purple-500 animate-bounce"></div>
+
+    <br><br>
+
+    <div class="max-w-sm mx-auto mt-10 p-6 bg-white rounded-xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-500">
+        <h2 class="text-xl font-bold text-gray-900">Título do Card</h2>
+        <p class="mt-2 text-gray-600">Esse é um exemplo de card animado e responsivo com Tailwind CSS.</p>
+    </div>
+</body>
+</html>
